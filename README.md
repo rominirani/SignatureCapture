@@ -9,4 +9,4 @@ This project demonstrates:
  - Submit this form to a App Engine backend and store the data.
  - Retrieve the signature stored in the App Engine backend and display it back on a Web page.
 
-I have written a blog post that goes into the details of the code. 
+I have written a [blog post](http://rominirani.com/2013/12/02/html5-signature-storage-and-app-engine-app/) that goes into the details of the code. 
