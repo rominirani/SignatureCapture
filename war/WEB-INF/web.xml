@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>SignatureCaptureService</servlet-name>
+		<servlet-class>com.mindstorm.signaturecapture.services.SignatureCaptureService</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ClearSignaturesJob</servlet-name>
+		<servlet-class>com.mindstorm.signaturecapture.cron.ClearSignaturesJob</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignatureCaptureService</servlet-name>
+		<url-pattern>/signatureservice</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ClearSignaturesJob</servlet-name>
+		<url-pattern>/cron/ClearSignaturesJob</url-pattern>
+	</servlet-mapping>
+		<error-page>
+	    <error-code>500</error-code>
+	    <location>/error.jsp</location>
+	</error-page>
+	<welcome-file-list>
+		<welcome-file>signature.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
